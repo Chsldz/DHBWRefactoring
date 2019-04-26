@@ -4,12 +4,12 @@ import java.util.*;
 
 class Customer {
     private String name;
-    private Vector rentals = new Vector();
+    private ArrayList rentals = new ArrayList();
     Customer (String newname){
         name = newname;
     }
     void addRental(Rental arg) {
-        rentals.addElement(arg);
+        rentals.add(arg);
     }
     String getName (){
         return name;
@@ -17,7 +17,7 @@ class Customer {
     String statement() {
         double totalAmount = 0;
         int frequentRenterPoints = 0;
-        Enumeration enumRentals = rentals.elements();
+        Enumeration enumRentals = Collections.enumeration(rentals);
         String result = "refactor.Rental Record for " + this.getName() + "\n";
         result += "\t" + "Title" + "\t" + "\t" + "Days" + "\t" + "Amount" + "\n";
 

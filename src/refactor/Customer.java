@@ -5,16 +5,16 @@ import java.util.*;
 class Customer {
     private String name;
     private Vector rentals = new Vector();
-    public Customer (String newname){
+    Customer (String newname){
         name = newname;
     };
-    public void addRental(Rental arg) {
+    void addRental(Rental arg) {
         rentals.addElement(arg);
     };
-    public String getName (){
+    String getName (){
         return name;
     };
-    public String statement() {
+    String statement() {
         double totalAmount = 0;
         int frequentRenterPoints = 0;
         Enumeration enum_rentals = rentals.elements();	    

@@ -18,5 +18,5 @@ public class Movie {
     }
     String getTitle (){
         return title;
-    };
+    }
 }
